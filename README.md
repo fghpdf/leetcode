@@ -3,6 +3,6 @@ To live in another way
 
 ## Target
 - [x] 50 easy quesitons
-- [] all easy questions of top 100 interview questions
-- [] 100 quesions
-- [] 50 medium questions
+- [ ] all easy questions of top 100 interview questions
+- [ ] 100 quesions
+- [ ] 50 medium questions
