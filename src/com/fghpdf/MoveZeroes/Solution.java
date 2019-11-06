@@ -16,7 +16,6 @@ public class Solution {
 
 		int position = 0;
 		for (int num : nums) {
-			System.out.println(num);
 			if (num != 0) {
 				nums[position++] = num;
 			}
