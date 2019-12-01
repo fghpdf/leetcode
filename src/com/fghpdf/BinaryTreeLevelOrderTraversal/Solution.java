@@ -7,6 +7,8 @@ import java.util.Queue;
 /**
  * @author fghpdf
  * @date 2019/12/1
+ * https://leetcode.com/problems/binary-tree-level-order-traversal/
+ * queue to save last level left and right
  **/
 public class Solution {
 	public List<List<Integer>> levelOrder(TreeNode root) {
