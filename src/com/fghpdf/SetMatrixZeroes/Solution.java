@@ -1,5 +1,7 @@
 package com.fghpdf.SetMatrixZeroes;
 
+import java.util.Arrays;
+
 /**
  * @author fghpdf
  * @date 2019/11/25
@@ -36,5 +38,16 @@ public class Solution {
 				matrix[i][0] = 0;
 			}
 		}
+	}
+
+	public static void main(String[] args) {
+		int[][] matrix = new int[4][4];
+		matrix[0] = new int[]{1, 1, 1, 1};
+		matrix[1] = new int[]{1, 1, 0, 1};
+		matrix[2] = new int[]{1, 1 ,1 ,1};
+		matrix[3] = new int[]{0, 1, 1, 1};
+		Solution solution = new Solution();
+		solution.setZeroes(matrix);
+		System.out.println(Arrays.deepToString(matrix));
 	}
 }
