@@ -43,7 +43,7 @@ public class Solution {
 		return true;
 	}
 
-	private int lo, maxLen;
+	private int position, maxLength;
 
 	private String lo2(String s) {
 		int len = s.length();
@@ -52,22 +52,24 @@ public class Solution {
 		}
 
 		for (int i = 0; i < len-1; i++) {
-			extendPalindrome(s, i, i);  //assume odd length, try to extend Palindrome as possible
-			extendPalindrome(s, i, i+1); //assume even length.
+			extendPalindrome(s, i, i);
+			extendPalindrome(s, i, i+1);
 		}
-		return s.substring(lo, lo + maxLen);
+		return s.substring(position, position + maxLength);
 	}
 
-	private void extendPalindrome(String s, int j, int k) {
-		System.out.printf("%d %d\n", j, k);
-		while (j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)) {
-			j--;
-			k++;
+	private void extendPalindrome(String s, int left, int right) {
+		while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+			left--;
+			right++;
 		}
-		System.out.printf("%d-%d\n", j, k);
-		if (maxLen < k - j - 1) {
-			lo = j + 1;
-			maxLen = k - j - 1;
+
+		// left + 1 is palindrome start point
+		// left and right is palindrome extra element so
+		// right - left + 1 - 2
+		if (maxLength < right - left - 1) {
+			position = left + 1;
+			maxLength = right - left - 1;
 		}
 	}
 
@@ -75,6 +77,6 @@ public class Solution {
 
 	public static void main(String[] args) {
 		Solution sol = new Solution();
-		System.out.println(sol.lo2("cbbd"));
+		System.out.println(sol.lo2("babad"));
 	}
 }
