@@ -3,7 +3,7 @@ package com.fghpdf.CoinChange2;
 /**
  * @author fghpdf
  * @date 2020/5/25
- * @link
+ * @link https://leetcode.com/problems/coin-change-2/
  **/
 public class Solution {
     public int change(int amount, int[] coins) {
