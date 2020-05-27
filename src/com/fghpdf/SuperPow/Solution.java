@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @link https://leetcode.com/problems/super-pow/
  **/
 public class Solution {
-    private int model = 1337;
+    private final int model = 1337;
 
     public int superPow(int a, int[] b) {
         if (b.length == 0) {
