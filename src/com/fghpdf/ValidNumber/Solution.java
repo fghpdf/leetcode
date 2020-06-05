@@ -1,4 +1,4 @@
-package ValidNumber;
+package com.fghpdf.ValidNumber;
 
 /**
  * @author fghpdf
