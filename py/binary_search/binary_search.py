@@ -1,6 +1,8 @@
 from typing import List
 
-
+# @author fghpdf
+# @date 2021/10/03
+# @link https://leetcode.com/problems/binary-search/
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0
