@@ -1,7 +1,7 @@
 '''
 Author: fghpdf
 Date: 2021-10-05 20:56:23
-LastEditTime: 2021-10-05 21:10:46
+LastEditTime: 2021-10-05 21:22:41
 LastEditors: fghpdf
 '''
 from typing import List
@@ -15,11 +15,31 @@ class Solution:
         for index in range(len(numbers)):
             num = numbers[index]
             if num <= target:
-                try:
-                    another_index = numbers.index(target - num, index+1)
+                # try:
+                #     another_index = numbers.index(target - num, index+1)
+                #     return [index+1, another_index+1]
+                # except ValueError:
+                #     continue
+                another_index = self.search(numbers, index+1, len(numbers) - 1, target - num)
+                if another_index != -1:
                     return [index+1, another_index+1]
-                except ValueError:
-                    continue
+
+    def search(self, nums: List[int], start, end, target: int) -> int:
+        left = start
+        right = end
+
+        # loop [left, right]
+        while left <= right:
+            mid = (left + right) // 2
+
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+
+        return -1
             
 
 class TestTwoSum(unittest.TestCase):
