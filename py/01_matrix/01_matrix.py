@@ -1,7 +1,7 @@
 '''
 Author: fghpdf
 Date: 2021-10-11 08:53:59
-LastEditTime: 2021-10-11 09:52:42
+LastEditTime: 2021-10-11 20:25:48
 LastEditors: fghpdf
 '''
 from functools import partial
@@ -12,7 +12,6 @@ import unittest
 class Solution:
     def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
       visited = set()
-      from collections import deque
       q = deque()
       for i in range(len(mat)):
           for j in range(len(mat[0])):
