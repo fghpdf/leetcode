@@ -23,12 +23,12 @@ class Solution:
             res[p2] = sum % 10
 
         cut = 0
-        for i in range(len(res[cut:])):
+        for i in range(len(res)):
           if res[i] != 0:
             break
           cut = i + 1
 
-        if len(res) == 0:
+        if len(res[cut:]) == 0:
           return "0"
 
         return "".join([str(x) for x in res[cut:]])        
