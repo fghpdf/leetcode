@@ -13,3 +13,5 @@ if not os.path.exists(folderPath):
 filePath = os.path.join('./py', folderName, folderName+'.py')
 if not os.path.exists(filePath):
   with open(filePath, 'w'): pass
+
+os._exit(0)
