@@ -20,6 +20,13 @@ class Solution:
         grid1[0][0] = grid[-1][-1]
         k -= 1
         return self.shiftGrid(grid1, k)
+
+class Solution:
+    def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
+        col, nums = len(grid[0]), sum(grid, [])
+        k = k % len(nums)
+        nums = nums[-k:] + nums[:-k]
+        return [nums[i:i+col] for i in range(0, len(nums), col)]
         
 
 class TestSolution(unittest.TestCase):
