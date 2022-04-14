@@ -20,4 +20,4 @@ class Solution:
         if root.val < val:
             return self.searchBST(root.right, val)
         
-        return None;
+        return None
