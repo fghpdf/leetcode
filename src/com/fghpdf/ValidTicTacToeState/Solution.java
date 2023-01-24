@@ -1,4 +1,4 @@
-package com.fghpdf;
+package com.fghpdf.ValidTicTacToeState;
 
 class Solution {
 
